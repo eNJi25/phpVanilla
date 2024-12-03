@@ -31,7 +31,7 @@ $categories = [
 <div class="row mx-0">
     <h2 class="pb-2 px-0 border-bottom">Les dernières annonces</h2>
     <?php
-    foreach ($listings as $listing) {
+    foreach ($listings as $key => $listing) {
         require 'templates/listing_part.php';
     }
     ?>
