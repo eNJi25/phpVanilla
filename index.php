@@ -1,5 +1,12 @@
 <?php
 require_once 'templates/header.php';
+
+$listings = [
+    ["title" => "Test 1"],
+    ["title" => "Test 2"],
+    ["title" => "Test 3"]
+];
+
 ?>
 
 <div class="col-xxl-8 px-4 py-5">
@@ -16,6 +23,15 @@ require_once 'templates/header.php';
             </div>
         </div>
     </div>
+</div>
+
+<div class="row text-center">
+    <h2>Les dernières annonces</h2>
+    <?php
+    foreach ($listings as $listing) {
+        require 'templates/listing_part.php';
+    }
+    ?>
 </div>
 
 <?php
