@@ -2,10 +2,16 @@
 require_once 'templates/header.php';
 
 $listings = [
-    ["title" => "Test 1"],
-    ["title" => "Test 2"],
-    ["title" => "Test 3"]
+    ["title" => "Test 1", "price" => 30, "image" => "rocket-league.jpg"],
+    ["title" => "Test 2", "price" => 20, "image" => "rocket-league.jpg"],
+    ["title" => "Test 3", "price" => 25, "image" => "rocket-league.jpg"]
 ];
+
+$categories = [
+    ["name" => "Jeux Vidéos", "icon" => '<i class="bi bi-controller"></i>'],
+    ["name" => "Vêtements", "icon" => '<i class="bi bi-universal-access"></i>'],
+    ["name" => "Meubles", "icon" => '<i class="bi bi-lamp"></i>']
+]
 
 ?>
 
@@ -25,13 +31,24 @@ $listings = [
     </div>
 </div>
 
-<div class="row text-center">
-    <h2>Les dernières annonces</h2>
+<div class="row mx-0">
+    <h2 class="pb-2 px-0 border-bottom">Les dernières annonces</h2>
     <?php
     foreach ($listings as $listing) {
         require 'templates/listing_part.php';
     }
     ?>
+</div>
+
+<div class="py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Les catégories</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <?php
+        foreach ($categories as $key => $category) {
+            require 'templates/category_part.php';
+        }
+        ?>
+    </div>
 </div>
 
 <?php
