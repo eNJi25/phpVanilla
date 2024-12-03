@@ -1,14 +1,11 @@
 <?php
 require_once 'templates/header.php';
 require_once 'libs/listing.php';
+require_once 'libs/category.php';
 
 $listings = getListings();
 
-$categories = [
-    ["name" => "Jeux Vidéos", "icon" => '<i class="bi bi-controller"></i>'],
-    ["name" => "Vêtements", "icon" => '<i class="bi bi-universal-access"></i>'],
-    ["name" => "Meubles", "icon" => '<i class="bi bi-lamp"></i>']
-]
+$categories = getCategories();
 
 ?>
 
@@ -21,8 +18,8 @@ $categories = [
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Avec Okaz achetez et vendez vos objets</h1>
             <p class="lead">Trouvez ce que vous cherchez ou donnez une seconde vie à vos objets en un clic ! Okaz est la plateforme incontournable pour vendre, acheter ou échanger tout ce que vous souhaitez : vêtements, meubles, jeux vidéos et bien plus encore !</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                <a class="btn btn-primary btn-lg px-4 me-md-2" href="annonces.php">Découvrir les annonces</a>
+                <a class="btn btn-outline-secondary btn-lg px-4" href="ajout_annonce.php">Ajouter une annonce</a>
             </div>
         </div>
     </div>

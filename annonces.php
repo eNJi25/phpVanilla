@@ -19,7 +19,7 @@ $listings = getListings();
             </div>
             <div class="p-3 border-bottom">
                 <label for="price">Prix</label>
-                <div class="input-group">
+                <div class="input-group mb-1">
                     <input type="number" name="min_price" id="min_price" class="form-control" placeholder="Prix minimum">
                     <span class="input-group-text">€</span>
                 </div>
